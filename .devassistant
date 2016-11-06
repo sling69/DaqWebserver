@@ -1,0 +1,18 @@
+dependencies:
+- rpm:
+  - python
+- if $venv and not $py3:
+  - rpm:
+    - python-virtualenv
+- if not $venv:
+  - rpm:
+    - python${py3}-django
+devassistant_version: 0.11.2
+original_kwargs:
+  github: sling69
+  name: DaqWebserver
+  py3: ''
+  venv: ''
+project_type:
+- python
+- django
